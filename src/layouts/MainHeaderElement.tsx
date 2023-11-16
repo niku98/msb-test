@@ -6,9 +6,10 @@ const MainHeaderElement = (props: MainHeaderElementProps) => {
   return (
     <header
       className={cn(
-        "flex justify-between gap-3",
+        "flex justify-between items-center gap-3",
         "py-4 px-10",
-        "bg-background"
+        "bg-background",
+        "relative z-50"
       )}
     >
       <Link path="/">
