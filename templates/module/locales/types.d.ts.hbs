@@ -1,0 +1,8 @@
+import {{moduleName.camel}}Locales from "src/modules/{{moduleName.camel}}/locales";
+
+declare global {
+  interface Localizations {
+    {{moduleName.snake}}: typeof {{moduleName.camel}}Locales.en &
+      typeof {{moduleName.camel}}Locales.vi;
+  }
+}

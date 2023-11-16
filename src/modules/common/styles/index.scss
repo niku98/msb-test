@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 255 255 255;
+    --foreground: 2 8 23;
+
+    --card: 255 255 255;
+    --card-foreground: 2 8 23;
+
+    --popover: 255 255 255;
+    --popover-foreground: 2 8 23;
+
+    --primary: 244 96 12;
+    --primary-foreground: 248 250 252;
+
+    --secondary: 241, 245 249;
+    --secondary-foreground: 15 23 42;
+
+    --muted: 241, 245 249;
+    --muted-foreground: 152, 162, 179;
+
+    --accent: 241, 245 249;
+    --accent-foreground: 15 23 42;
+
+    --destructive: 240 68 56;
+    --destructive-foreground: 248 250 252;
+
+    --border: 226 232 240;
+    --input: 208 213 221;
+    --ring: 2 8 23;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 2 8 23;
+    --foreground: 248 250 252;
+
+    --card: 2 8 23;
+    --card-foreground: 248 250 252;
+
+    --popover: 2 8 23;
+    --popover-foreground: 248 250 252;
+
+    --primary: 248 250 252;
+    --primary-foreground: 15 23 42;
+
+    --secondary: 30 41 59;
+    --secondary-foreground: 248 250 252;
+
+    --muted: 30 41 59;
+    --muted-foreground: 148 163 184;
+
+    --accent: 30 41 59;
+    --accent-foreground: 248 250 252;
+
+    --destructive: 127 29 29;
+    --destructive-foreground: 248 250 252;
+
+    --border: 30 41 59;
+    --input: 30 41 59;
+    --ring: 203 213 225;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", san-serif;
+  }
+}
+
+@layer components {
+  .loader {
+    @apply w-12 h-12 rounded-full inline-block relative;
+    @apply border-4 border-primary;
+    animation: pulse 1s linear infinite;
+
+    &::after {
+      content: "";
+      @apply absolute left-1/2 top-1/2 w-12 h-12 rounded-full -translate-x-1/2 -translate-y-1/2;
+      @apply border-4 border-primary;
+      animation: scaleUp 1s linear infinite;
+    }
+  }
+  @keyframes scaleUp {
+    0% {
+      transform: translate(-50%, -50%) scale(0);
+    }
+    60%,
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  @keyframes pulse {
+    0%,
+    60%,
+    100% {
+      transform: scale(1);
+    }
+    80% {
+      transform: scale(1.2);
+    }
+  }
+}

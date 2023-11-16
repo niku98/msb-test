@@ -1,0 +1,17 @@
+definePageMeta({
+  title: "{{moduleName.snake}}:index_title",
+  menu: {
+    title: "{{moduleName.snake}}:index_title",
+  },
+  parentMeta: {
+    layout: "{{layout}}",
+  },
+});
+
+const {{moduleName.pascal}}IndexPage = () => {
+  const { t } = useTranslation();
+
+  return <>{t("{{moduleName.snake}}:index_title")}</>;
+};
+
+export default {{moduleName.pascal}}IndexPage;

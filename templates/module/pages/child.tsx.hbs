@@ -1,0 +1,14 @@
+definePageMeta({
+  title: "{{moduleName.snake}}:child_title",
+  menu: {
+    title: "{{moduleName.snake}}:child_title",
+  },
+});
+
+const {{moduleName.pascal}}ChildPage = () => {
+  const { t } = useTranslation();
+
+  return <>{t("{{moduleName.snake}}:child_title")}</>;
+};
+
+export default {{moduleName.pascal}}ChildPage;

@@ -1,0 +1,14 @@
+{
+  "on_going": "Đang diễn ra",
+  "in_progress": "Đang xử lý",
+  "up_coming": "Sắp diễn ra",
+  "ended": "Đã kết thúc",
+  "not_started_yet": "Chưa bắt đầu",
+  "active": "Hoạt động",
+  "in_active": "Không hoạt động",
+  "locked": "Đã bị khoá",
+  "closed": "Đã đóng",
+  "opened": "Mở",
+  "success": "Thành công",
+  "failure": "Thất bại"
+}

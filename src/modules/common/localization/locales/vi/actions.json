@@ -1,0 +1,47 @@
+{
+  "addNew": "Thêm mới {{name, lowercase}}",
+  "update": "Cập nhật {{name, lowercase}}",
+  "edit": "Chỉnh sửa {{name, lowercase}}",
+  "save": "Lưu lại",
+  "delete": "Xoá {{name, lowercase}}",
+  "cancel": "Huỷ bỏ",
+  "ok": "Đồng ý",
+  "confirm": "Xác nhận",
+  "clear": "Làm trống",
+  "reset": "Làm lại",
+
+  "search": "Tìm kiếm",
+  "searchBy": "Tìm kiếm theo {{name, lowercase}}",
+
+  "schedule": "Đặt lịch",
+  "pause": "Tạm dừng",
+  "preview": "Xem trước",
+
+  "lock": "Khoá",
+  "activate": "Kích hoạt",
+
+  "sort": "Sắp xếp",
+  "sort_by": "Sắp xếp theo {{name, lowercase}}",
+
+  "enter": "Nhập {{name, lowercase}}",
+  "select": "Chọn {{name, lowercase}}",
+  "select_by": "Chọn theo {{name, lowercase}}",
+
+  "states": {
+    "create": {
+      "processing": "Đang thêm mới {{name, lowercase}}",
+      "successful": "Thêm mới {{name, lowercase}} thành công",
+      "failed": "Thêm mới {{name, lowercase}} thất bại, vui lòng thử lại sau"
+    },
+    "update": {
+      "processing": "Đang cập nhật {{name, lowercase}}",
+      "successful": "Cập nhật {{name, lowercase}} thành công",
+      "failed": "Cập nhật {{name, lowercase}} thất bại, vui lòng thử lại sau"
+    },
+    "delete": {
+      "processing": "Đang xoá {{name, lowercase}}",
+      "successful": "Xoá {{name, lowercase}} thành công",
+      "failed": "Xoá {{name, lowercase}} thất bại, vui lòng thử lại sau"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "on_going": "On going",
+  "in_progress": "In progress",
+  "up_coming": "Up coming",
+  "ended": "Ended",
+  "not_started_yet": "Not started yet",
+  "active": "Active",
+  "in_active": "In active",
+  "locked": "Locked",
+  "closed": "Closed",
+  "opened": "Opened",
+  "success": "Success",
+  "failure": "Failure"
+}
