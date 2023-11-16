@@ -1,0 +1,66 @@
+@layer components {
+  .app-menu {
+    @apply inline-flex;
+    .app-menu__item {
+      @apply p-2.5 inline-flex items-center gap-1 cursor-pointer relative;
+
+      .app-menu__item-title {
+        @apply text-sm font-medium;
+      }
+
+      .app-menu__item-icon {
+        @apply w-4 h-4 transition-transform duration-300;
+      }
+
+      &:hover {
+        .app-menu__item-icon {
+          @apply rotate-180;
+        }
+      }
+
+      // Submenu
+      .app-menu__sub-menu {
+        @apply flex-col absolute top-full -right-7 mt-4 bg-background rounded-lg shadow-md;
+        @apply invisible opacity-0 duration-300;
+        min-width: 319px;
+
+        &::after {
+          content: "";
+          @apply block absolute bottom-full w-full h-4;
+        }
+
+        .app-menu__item {
+          @apply w-full justify-between p-4 hover:bg-foreground/5 rounded-lg;
+
+          .app-menu__item-title {
+            @apply text-base font-normal;
+          }
+
+          .app-menu__item-icon {
+            @apply -rotate-90;
+          }
+
+          &:hover {
+            .app-menu__item-icon {
+              @apply rotate-0;
+            }
+          }
+
+          .app-menu__sub-menu {
+            @apply mt-0 right-auto left-full top-0 ml-2;
+
+            &::after {
+              @apply block absolute bottom-auto top-0 h-28 w-2 right-full;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        > .app-menu__sub-menu {
+          @apply visible opacity-100;
+        }
+      }
+    }
+  }
+}

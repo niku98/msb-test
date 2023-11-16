@@ -12,6 +12,10 @@ const Images = {
       },
     };
   },
+
+  get logo() {
+    return new URL("./images/horizontal-logo.png", import.meta.url).href;
+  },
 };
 
 export const Assets = {

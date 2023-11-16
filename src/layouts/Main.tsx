@@ -1,10 +1,15 @@
+import MainHeaderElement from "src/layouts/MainHeaderElement";
+
 interface MainLayoutProps {}
 
 const MainLayout = (props: MainLayoutProps) => {
   return (
-    <>
-      <Outlet />
-    </>
+    <div>
+      <MainHeaderElement />
+      <main>
+        <Outlet />
+      </main>
+    </div>
   );
 };
 

@@ -22,6 +22,6 @@
   "editor.codeActionsOnSave": {
     "source.organizeImports": true
   },
-  "files.associations": { "*.scss": "postcss" },
-  "cSpell.words": ["antd", "Immer", "Sider", "zustand"]
+  "cSpell.words": ["antd", "Immer", "Sider", "zustand"],
+  "css.customData": [".vscode/css_custom_data.json"]
 }
