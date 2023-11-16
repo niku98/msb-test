@@ -1,4 +1,7 @@
-import { useForm } from "react-hook-form";
+import FeaturesBox from "src/modules/index/components/FeaturesBox";
+import HeroBanner from "src/modules/index/components/HeroBanner";
+import ProductCard from "src/modules/index/components/ProductCard";
+import { products } from "src/modules/index/constants/products";
 
 definePageMeta({
   title: "index:index_title",
@@ -11,34 +14,22 @@ definePageMeta({
 });
 
 const IndexIndexPage = () => {
-  const { t } = useTranslation();
-
-  const form = useForm({
-    defaultValues: {
-      username: "",
-    },
-  });
-
   return (
     <>
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(() => {})} className="space-y-8">
-          <FormField
-            control={form.control}
-            name="username"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Username</FormLabel>
-                <FormControl>
-                  <Input placeholder="shadcn" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <Button type="submit">Submit</Button>
-        </form>
-      </Form>
+      <HeroBanner />
+      <div className="container">
+        <FeaturesBox className="relative -translate-y-1/2" />
+      </div>
+      <div className="container">
+        <h3 className="text-center text-2xl font-bold mb-10">
+          Danh sách sản phẩm
+        </h3>
+        <div className="grid grid-cols-3 gap-x-6 gap-y-10">
+          {products.map((product) => (
+            <ProductCard key={product.title} {...product} />
+          ))}
+        </div>
+      </div>
     </>
   );
 };
