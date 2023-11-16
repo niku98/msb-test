@@ -6,15 +6,14 @@ const AppMainLoading: LoadingComponentType<{ fullscreen?: boolean }> = ({
   fullscreen = true,
 }) => {
   return (
-    <div
-      className={
-        fullscreen
-          ? "min-h-screen fixed z-[99999] inset-0"
-          : "!max-h-[unset] relative"
-      }
-    >
+    <div className={"relative"}>
       {state && (
-        <div className="absolute inset-0 bg-white bg-opacity-30 z-[999999] flex items-center justify-center">
+        <div
+          className={cn(
+            "inset-0 bg-white bg-opacity-30 z-[999999] flex items-center justify-center",
+            fullscreen ? "fixed" : "absolute"
+          )}
+        >
           <div className="loader"></div>
         </div>
       )}

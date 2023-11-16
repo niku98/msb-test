@@ -12,14 +12,16 @@ module.exports = {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1111px",
       },
     },
     extend: {
       colors: {
         border: "rgb(var(--border) / <alpha-value>)",
+        light: "rgb(var(--light) / <alpha-value>)",
         input: "rgb(var(--input) / <alpha-value>)",
         ring: "rgb(var(--ring) / <alpha-value>)",
+        gray: "rgb(var(--gray) / <alpha-value>)",
         background: "rgb(var(--background) / <alpha-value>)",
         foreground: "rgb(var(--foreground) / <alpha-value>)",
         primary: {
@@ -50,6 +52,10 @@ module.exports = {
           DEFAULT: "rgb(var(--card) / <alpha-value>)",
           foreground: "rgb(var(--card-foreground) / <alpha-value>)",
         },
+      },
+      boxShadow: {
+        "3xl":
+          "0px 8px 8px -4px rgba(16, 24, 40, 0.03), 0px 20px 24px -4px rgba(16, 24, 40, 0.08)",
       },
       borderRadius: {
         lg: "var(--radius)",
