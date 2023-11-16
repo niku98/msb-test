@@ -18,17 +18,17 @@ const FeaturesBox = ({ className }: FeatureBoxProps) => {
       </div>
       <div className="col-span-3 grid grid-cols-3 py-10">
         <div className="px-4">
-          <Document className="text-primary text-4xl" />
+          <Document className="text-primary text-4xl mb-4" />
           <h5 className="font-bold text-lg">100% online</h5>
           <p className="text-base text-gray">Đăng ký và nộp hồ sơ trực tuyến</p>
         </div>
         <div className="px-4">
-          <DocumentCheck className="text-primary text-4xl" />
+          <DocumentCheck className="text-primary text-4xl mb-4" />
           <h5 className="font-bold text-lg">Phê duyệt siêu tốc</h5>
           <p className="text-base text-gray">Duyệt hồ sơ nhanh trong 5 phút</p>
         </div>
         <div className="px-4">
-          <LayerSwitch className="text-primary text-4xl" />
+          <LayerSwitch className="text-primary text-4xl mb-4" />
           <h5 className="font-bold text-lg">Sử dụng linh hoạt</h5>
           <p className="text-base text-gray">
             Dễ dàng chuyển đổi linh hoạt giữa các sản phẩm
