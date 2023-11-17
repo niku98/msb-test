@@ -50,6 +50,19 @@
         "5"
       ],
       "id": 1
+    },
+    {
+      "name": "Phạm Văn Mạnh",
+      "phone": "0968864783",
+      "city": "HN",
+      "district": "D2",
+      "description": "asdfasdfasdf",
+      "gender": "male",
+      "products": [
+        "3",
+        "5"
+      ],
+      "id": 2
     }
   ]
 }
