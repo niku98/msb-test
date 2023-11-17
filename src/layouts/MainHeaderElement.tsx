@@ -1,8 +1,7 @@
 import MainHeaderProfileDropdownElement from "src/layouts/MainHeaderProfileDropdownElement";
+import AdviceRequestSheet from "src/modules/adviceRequest/components/AdviceRequestSheet";
 import LoginModal from "src/modules/auth/components/LoginModal";
 import { MenuItem } from "src/modules/common/components/AppMenu";
-
-interface MainHeaderElementProps {}
 
 const menuItems: MenuItem[] = [
   {
@@ -76,17 +75,25 @@ const menuItems: MenuItem[] = [
   },
 ];
 
-const MainHeaderElement = (props: MainHeaderElementProps) => {
+const MainHeaderElement = () => {
+  // Handle login modal
   const {
     state: loginModalOpened,
     on: openLoginModal,
     change: changeLoginModalOpened,
   } = useToggle();
 
-  const { isAuthenticated, authState } = useAuth();
-  const authenticated = isAuthenticated();
+  // Handle advice request sheet
+  const {
+    state: adviceRequestSheetOpened,
+    on: openAdviceRequest,
+    change: changeAdviceRequestSheetOpened,
+  } = useToggle();
 
   // Handle menu items
+  const { isAuthenticated } = useAuth();
+  const authenticated = isAuthenticated();
+
   const items = useMemo(() => {
     const result = menuItems.slice(0);
     if (!authenticated) {
@@ -117,13 +124,19 @@ const MainHeaderElement = (props: MainHeaderElementProps) => {
         <nav>
           <AppMenu items={items} />
         </nav>
-        <Button variant="secondary">Yêu cầu tư vấn</Button>
+        <Button variant="secondary" onClick={openAdviceRequest}>
+          Yêu cầu tư vấn
+        </Button>
         {authenticated ? <MainHeaderProfileDropdownElement /> : null}
       </div>
 
       <LoginModal
         open={loginModalOpened}
         onOpenChange={changeLoginModalOpened}
+      />
+      <AdviceRequestSheet
+        open={adviceRequestSheetOpened}
+        onOpenChange={changeAdviceRequestSheetOpened}
       />
     </header>
   );

@@ -22,7 +22,9 @@ export type UseObxQueryOptions<
   TQueryKey extends QueryKey
 > = ReactQueryExtraOptions &
   Omit<UseQueryOptions<TQueryFnData, TError, TData, TQueryKey>, "queryFn"> & {
-    queryFn: (context: QueryFunctionContext<TQueryKey>) => Observable<TData>;
+    queryFn: (
+      context: QueryFunctionContext<TQueryKey>
+    ) => Observable<TQueryFnData>;
   };
 
 export type UseObxInfiniteQueryOptions<
@@ -35,7 +37,9 @@ export type UseObxInfiniteQueryOptions<
     UseInfiniteQueryOptions<TQueryFnData, TError, TData, TQueryKey>,
     "queryFn"
   > & {
-    queryFn: (context: QueryFunctionContext<TQueryKey>) => Observable<TData>;
+    queryFn: (
+      context: QueryFunctionContext<TQueryKey>
+    ) => Observable<TQueryFnData>;
   };
 
 export type UseObxMutationOptions<

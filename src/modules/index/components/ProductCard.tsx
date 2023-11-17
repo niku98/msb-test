@@ -27,4 +27,20 @@ const ProductCard = ({ title, description, image }: ProductCardProps) => {
   );
 };
 
+ProductCard.Skeleton = () => (
+  <div className="bg-background rounded-2xl overflow-hidden flex flex-col">
+    <Skeleton className="w-[333px] h-[210px]" />
+
+    <div className="py-6 px-4 flex-grow flex flex-col items-start">
+      <Skeleton className="w-28 h-5" />
+      <div className="flex-grow mt-4 space-y-2">
+        <Skeleton className="w-44 h-3" />
+        <Skeleton className="w-48 h-3" />
+        <Skeleton className="w-52 h-3" />
+      </div>
+      <Skeleton className="w-32 h-10" />
+    </div>
+  </div>
+);
+
 export default ProductCard;

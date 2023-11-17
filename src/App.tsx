@@ -15,6 +15,7 @@ export default function App() {
       }}
       auth={{
         loginPath: "/auth/login",
+        unAuthenticatedMessage: "Bạn cần đăng nhập để truy cập trang này.",
         createAuthStoreOptions: {
           state() {
             return {

@@ -1,0 +1,55 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Vay tín dụng",
+      "description": "Đa dạng lựa chọn theo phong cách chi tiêu",
+      "image": "http://localhost:3000/product-1.png"
+    },
+    {
+      "id": "2",
+      "title": "Vay Linh Hoạt",
+      "description": "Giải ngân tức thì, tiêu dùng linh hoạt",
+      "image": "http://localhost:3000/product-2.png"
+    },
+    {
+      "id": "3",
+      "title": "Mua trước trả sau",
+      "description": "Chuyển đổi trả góp, nhẹ ví chi tiêu",
+      "image": "http://localhost:3000/product-3.png"
+    },
+    {
+      "id": "4",
+      "title": "Tiền nhanh",
+      "description": "Nhận khoản vay dự phòng, chủ động và nhanh chóng.",
+      "image": "http://localhost:3000/product-4.png"
+    },
+    {
+      "id": "5",
+      "title": "Tài khoản thanh toán M-Pro",
+      "description": "Siêu miễn phí, hoàn tiền tới 3,6 triệu đồng",
+      "image": "http://localhost:3000/product-5.png"
+    },
+    {
+      "id": "6",
+      "title": "Bảo hiểm",
+      "description": "Mua bảo hiểm trực tuyến dễ dàng chỉ với vài thao tác",
+      "image": "http://localhost:3000/product-6.png"
+    }
+  ],
+  "advice-requests": [
+    {
+      "name": "Angella",
+      "phone": "0968864783",
+      "city": "HN",
+      "district": "D2",
+      "description": "asdfasdfasdf",
+      "gender": "male",
+      "products": [
+        "1",
+        "5"
+      ],
+      "id": 1
+    }
+  ]
+}

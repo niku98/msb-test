@@ -1,7 +1,7 @@
 import FeaturesBox from "src/modules/index/components/FeaturesBox";
 import HeroBanner from "src/modules/index/components/HeroBanner";
 import ProductCard from "src/modules/index/components/ProductCard";
-import { products } from "src/modules/index/constants/products";
+import ProductRepository from "src/modules/products/repositories/ProductRepository";
 
 definePageMeta({
   title: "Trang chủ",
@@ -11,6 +11,13 @@ definePageMeta({
 });
 
 const IndexIndexPage = () => {
+  const { data: response, isInitialLoading } = useObxQuery({
+    queryKey: ["products"],
+    queryFn: () => {
+      return ProductRepository.getList();
+    },
+    showLoading: false,
+  });
   return (
     <>
       <HeroBanner />
@@ -22,9 +29,19 @@ const IndexIndexPage = () => {
           Danh sách sản phẩm
         </h3>
         <div className="grid grid-cols-3 gap-x-6 gap-y-10">
-          {products.map((product) => (
-            <ProductCard key={product.title} {...product} />
-          ))}
+          {isInitialLoading ? (
+            <>
+              <ProductCard.Skeleton />
+              <ProductCard.Skeleton />
+              <ProductCard.Skeleton />
+            </>
+          ) : (
+            <>
+              {response?.data?.map((product) => (
+                <ProductCard key={product.title} {...product} />
+              ))}
+            </>
+          )}
         </div>
       </div>
     </>
