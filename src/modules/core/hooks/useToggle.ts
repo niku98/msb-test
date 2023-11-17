@@ -3,6 +3,10 @@ import { useCallback, useState } from "react";
 export const useToggle = (defaultValue = false) => {
   const [state, setState] = useState(defaultValue);
 
+  const change = useCallback((state: boolean) => {
+    setState(state);
+  }, []);
+
   const toggle = useCallback(() => {
     setState((current) => !current);
   }, []);
@@ -14,5 +18,5 @@ export const useToggle = (defaultValue = false) => {
     setState(false);
   }, []);
 
-  return { state, toggle, on, off };
+  return { state, toggle, change, on, off };
 };

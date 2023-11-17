@@ -2,7 +2,7 @@ import { ChevronDown } from "lucide-react";
 import { ReactNode } from "react";
 
 export interface MenuItem {
-  title: string;
+  title: string | ReactNode;
   key: string;
   icon?: ReactNode;
   onClick?: () => void;
