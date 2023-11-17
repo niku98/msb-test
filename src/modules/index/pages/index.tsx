@@ -1,6 +1,6 @@
 import FeaturesBox from "src/modules/index/components/FeaturesBox";
 import HeroBanner from "src/modules/index/components/HeroBanner";
-import ProductCard from "src/modules/index/components/ProductCard";
+import ProductCard from "src/modules/products/components/ProductCard";
 import ProductRepository from "src/modules/products/repositories/ProductRepository";
 
 definePageMeta({

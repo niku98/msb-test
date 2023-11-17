@@ -7,7 +7,7 @@ import {
 } from "src/modules/adviceRequest/models/AdviceRequest";
 import AdviceRequestRepository from "src/modules/adviceRequest/repositories/AdviceRequestRepository";
 import { useToast } from "src/modules/common/components/ui/use-toast";
-import ProductRepository from "src/modules/products/repositories/ProductRepository";
+import ProductsCheckbox from "src/modules/products/components/ProductsCheckbox";
 import * as z from "zod";
 
 interface AdviceRequestFormProps {
@@ -33,15 +33,6 @@ const AdviceRequestForm = forwardRef(
     { onSuccess }: AdviceRequestFormProps,
     ref: ForwardedRef<AdviceRequestFormRef>
   ) => {
-    // Handle fetch products
-    const { data: productResponse, isInitialLoading } = useObxQuery({
-      queryKey: ["products"],
-      queryFn: () => {
-        return ProductRepository.getList();
-      },
-      showLoading: false,
-    });
-
     // Handle submit form
     const form = useForm<AdviceRequest>({
       resolver: zodResolver(adviceRequestSchema),
@@ -192,44 +183,12 @@ const AdviceRequestForm = forwardRef(
           <FormField
             control={form.control}
             name="products"
-            render={() => (
+            render={({ field }) => (
               <FormItem>
                 <FormLabel>Sản phẩm cần tư vấn</FormLabel>
-                <div className="grid grid-cols-2 gap-4">
-                  {productResponse?.data?.map((item) => (
-                    <FormField
-                      key={item.id}
-                      control={form.control}
-                      name="products"
-                      render={({ field }) => {
-                        return (
-                          <FormItem
-                            key={item.id}
-                            className="flex flex-row items-start space-x-3 space-y-0"
-                          >
-                            <FormControl>
-                              <Checkbox
-                                checked={field.value?.includes(item.id)}
-                                onCheckedChange={(checked) => {
-                                  return checked
-                                    ? field.onChange([...field.value, item.id])
-                                    : field.onChange(
-                                        field.value?.filter(
-                                          (value) => value !== item.id
-                                        )
-                                      );
-                                }}
-                              />
-                            </FormControl>
-                            <FormLabel className="font-normal">
-                              {item.title}
-                            </FormLabel>
-                          </FormItem>
-                        );
-                      }}
-                    />
-                  ))}
-                </div>
+                <FormControl>
+                  <ProductsCheckbox {...field} />
+                </FormControl>
                 <FormMessage />
               </FormItem>
             )}

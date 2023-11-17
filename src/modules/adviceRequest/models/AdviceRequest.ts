@@ -9,6 +9,6 @@ export interface AdviceRequest {
   city: string;
   district: string;
   gender: Gender;
-  products: (string | number)[];
+  products: string[];
   description: string;
 }
