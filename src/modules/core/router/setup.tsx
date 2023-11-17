@@ -131,7 +131,10 @@ function castRoutesObjectToArray(
         const mergedMeta = {
           ...defaultMeta,
           ...meta,
+          ...route?.$route?.meta,
         };
+
+        console.log(route, mergedMeta);
 
         const children = castRoutesObjectToArray(
           childrenRoutes,

@@ -2,6 +2,7 @@ import LoginForm from "src/modules/auth/components/LoginForm";
 
 definePageMeta({
   title: "Đăng nhập",
+  layout: "Blank",
 });
 
 interface LoginPageProps {}

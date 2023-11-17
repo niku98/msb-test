@@ -4,10 +4,7 @@ import ProductCard from "src/modules/index/components/ProductCard";
 import { products } from "src/modules/index/constants/products";
 
 definePageMeta({
-  title: "index:index_title",
-  menu: {
-    title: "index:index_title",
-  },
+  title: "Trang chủ",
   parentMeta: {
     layout: "Main",
   },

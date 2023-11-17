@@ -24,6 +24,12 @@ export default function App() {
               permissions: [],
             };
           },
+          logout(state) {
+            if (window.location.pathname.startsWith("/profile")) {
+              getAppRouter().navigate({ pathname: "/" });
+            }
+            return state;
+          },
         },
       }}
     >
