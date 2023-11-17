@@ -3,8 +3,11 @@ interface RoutePaths {
     Login: "/auth/login";
   };
   Index: {
-    Child: "/child";
     Index: "/";
+  };
+  Profile: {
+    Index: "/profile";
+    Products: "/profile/products";
   }
 }
 

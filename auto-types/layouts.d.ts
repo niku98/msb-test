@@ -1,5 +1,5 @@
 declare global {
-  type Layout = "Dashboard" | "Main";
+  type Layout = "Blank" | "Main" | "Profile";
 
   interface PageMeta {
     layout?: Layout;
