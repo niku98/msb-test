@@ -13,6 +13,19 @@ export default function App() {
       loading={{
         component: AppMainLoading,
       }}
+      auth={{
+        loginPath: "/auth/login",
+        createAuthStoreOptions: {
+          state() {
+            return {
+              user: undefined,
+              accessToken: undefined,
+              refreshToken: undefined,
+              permissions: [],
+            };
+          },
+        },
+      }}
     >
       {(routes) => (
         <>

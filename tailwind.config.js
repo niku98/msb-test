@@ -22,6 +22,9 @@ module.exports = {
         input: "rgb(var(--input) / <alpha-value>)",
         ring: "rgb(var(--ring) / <alpha-value>)",
         gray: "rgb(var(--gray) / <alpha-value>)",
+        "gray-400": "rgb(var(--gray-400) / <alpha-value>)",
+        "gray-500": "rgb(var(--gray-500) / <alpha-value>)",
+        overlay: "rgb(var(--overlay) / <alpha-value>)",
         background: "rgb(var(--background) / <alpha-value>)",
         foreground: "rgb(var(--foreground) / <alpha-value>)",
         primary: {
