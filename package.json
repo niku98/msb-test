@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "server:dev": "json-server --watch server/db.json --static ./server/public",
+    "server:dev": "json-server --port 3000 --watch server/db.json --static ./server/public",
     "dev:staging": "vite -m staging",
     "build": "vite build",
     "build:development": "vite build -m development",
