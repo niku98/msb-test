@@ -1,4 +1,4 @@
-# Reactjs Core Test
+# MSB Test
 
 ## Install Dependencies
 
@@ -14,8 +14,15 @@ yarn docs:dev
 
 ## Run Development
 
+1. Run frontend development server
 ```sh
 yarn dev
+```
+
+2. Run server development
+
+```sh
+yarn server:dev
 ```
 
 ## Build Production
