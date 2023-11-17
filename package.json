@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
+    "server:dev": "json-server --watch server/db.json --static ./server/public",
     "dev:staging": "vite -m staging",
     "build": "vite build",
     "build:development": "vite build -m development",
@@ -39,6 +40,7 @@
     "dayjs": "^1.11.6",
     "i18next": "^22.1.5",
     "immer": "^10.0.2",
+    "json-server": "^0.17.4",
     "lodash-es": "^4.17.21",
     "lucide-react": "^0.292.0",
     "mime-types": "^2.1.35",
