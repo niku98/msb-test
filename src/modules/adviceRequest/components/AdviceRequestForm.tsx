@@ -185,7 +185,9 @@ const AdviceRequestForm = forwardRef(
             name="products"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Sản phẩm cần tư vấn</FormLabel>
+                <FormLabel className="text-lg font-medium block mb-4">
+                  Sản phẩm cần tư vấn
+                </FormLabel>
                 <FormControl>
                   <ProductsCheckbox {...field} />
                 </FormControl>
